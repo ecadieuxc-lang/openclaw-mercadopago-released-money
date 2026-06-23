@@ -1,0 +1,14 @@
+# Documentation template only. Do not install from this repository task.
+# Recommended daily import time: 03:00 local operator timezone.
+
+[Unit]
+Description=Run OpenClaw Mercado Pago Released Money import daily
+
+[Timer]
+OnCalendar=*-*-* 03:00:00
+Persistent=true
+RandomizedDelaySec=300
+Unit=openclaw-mp-finance.service
+
+[Install]
+WantedBy=timers.target

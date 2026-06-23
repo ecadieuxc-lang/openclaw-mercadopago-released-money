@@ -1,0 +1,5 @@
+{
+  "app_scope": "Mercado Pago Released Money",
+  "schema_version": 1,
+  "migration": "0001_initial_schema"
+}

@@ -1,0 +1,12 @@
+{
+  "app_scope": "Mercado Pago Released Money",
+  "items": [
+    {
+      "id": "clar_sample_001",
+      "movement_id": "mov_sample_expense_001",
+      "question": "¿Cómo clasificar esta transferencia sintética sin inventar destinatario?",
+      "status": "pending",
+      "reason": "outgoing_transfer_unknown_recipient"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+DATE;SOURCE_ID;EXTERNAL_REFERENCE;RECORD_TYPE;DESCRIPTION;NET_CREDIT_AMOUNT;NET_DEBIT_AMOUNT;GROSS_AMOUNT;MP_FEE_AMOUNT;CURRENCY;BALANCE_AMOUNT;SALE_DETAIL;BUSINESS_UNIT;PAYMENT_METHOD_TYPE;SEGMENT_DETAIL
+2026-03-10T09:00:00-0400;SRC-DEMO-D001;EXT-DEMO-D001;release;Comercio Demo Duplicado;0;10000;10000;0;CLP;90000;Compra Duplicada Demo;mercado_pago;debit_card;duplicado_exacto_ficticio
+2026-03-10T09:00:00-0400;SRC-DEMO-D001;EXT-DEMO-D001;release;Comercio Demo Duplicado;0;10000;10000;0;CLP;90000;Compra Duplicada Demo;mercado_pago;debit_card;duplicado_exacto_ficticio
+2026-03-10T10:00:00-0400;SRC-DEMO-D002;EXT-DEMO-D002;release;Transferencia Demo Repetida;50000;0;50000;0;CLP;140000;Transferencia Demo;mercado_pago;bank_transfer;source_id_repetido_ficticio
+2026-03-10T10:00:00-0400;SRC-DEMO-D002;EXT-DEMO-D002;release;Transferencia Demo Repetida;50000;0;50000;0;CLP;140000;Transferencia Demo;mercado_pago;bank_transfer;source_id_repetido_equivalente_ficticio
+2026-03-10T11:00:00-0400;SRC-DEMO-D003;EXT-DEMO-D003;release;Rendimiento Demo Distinto;400;0;400;0;CLP;140400;Rendimiento Demo;mercado_pago;account_money;movimiento_distinto_ficticio

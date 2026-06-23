@@ -1,0 +1,30 @@
+{
+  "app_scope": "Mercado Pago Released Money",
+  "safe_for_assistant": true,
+  "summary": "Contexto sintético del período Junio 2026 para responder sin inventar datos financieros.",
+  "current_period": {
+    "period_id": "2026-06",
+    "period_label": "Junio 2026",
+    "status": "open",
+    "income_total": 1250000,
+    "expense_total": 14500,
+    "net_total": 1235500,
+    "expense_by_category": {
+      "transfers": 12000,
+      "fees": 2500
+    },
+    "income_by_kind": {
+      "salary": 1250000
+    },
+    "pending_clarification_count": 1
+  },
+  "clarifications": [
+    {
+      "id": "clar_sample_001",
+      "movement_id": "mov_sample_expense_001",
+      "question": "Transferencia sintética pendiente de clasificación.",
+      "status": "pending",
+      "reason": "outgoing_transfer_unknown_recipient"
+    }
+  ]
+}

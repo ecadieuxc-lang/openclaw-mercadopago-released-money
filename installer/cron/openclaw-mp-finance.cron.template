@@ -1,0 +1,6 @@
+# Documentation template only. Do not install from this repository task.
+# Recommended fallback if systemd --user is unavailable.
+# Runs daily at 03:00 local operator timezone.
+# Secrets must be read from the private operator environment file by future real tooling.
+
+0 3 * * * cd "$HOME/.local/share/openclaw-mercadopago-released-money/runtime" && /usr/bin/env node runtime/src/cli/index.mjs import --source-api --config "$HOME/.config/openclaw-mercadopago-released-money/config.json"

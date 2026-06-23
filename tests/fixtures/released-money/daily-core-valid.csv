@@ -1,0 +1,9 @@
+DATE;SOURCE_ID;EXTERNAL_REFERENCE;RECORD_TYPE;DESCRIPTION;NET_CREDIT_AMOUNT;NET_DEBIT_AMOUNT;GROSS_AMOUNT;MP_FEE_AMOUNT;CURRENCY;BALANCE_AMOUNT;SALE_DETAIL;BUSINESS_UNIT;PAYMENT_METHOD_TYPE;SEGMENT_DETAIL
+2026-01-05T09:00:00-0400;SRC-DEMO-0001;EXT-DEMO-0001;release;Ingreso Demo Normal;120000;0;120000;0;CLP;120000;Venta Demo Uno;mercado_pago;account_money;ingreso_ficticio
+2026-01-05T10:15:00-0400;SRC-DEMO-0002;EXT-DEMO-0002;release;Comercio Demo Uno;0;15000;15000;0;CLP;105000;Compra Demo Uno;mercado_pago;debit_card;gasto_comercio_ficticio
+2026-01-05T11:30:00-0400;SRC-DEMO-0003;EXT-DEMO-0003;release;Transferencia Demo Saliente;0;25000;25000;0;CLP;80000;Transferencia Demo;mercado_pago;bank_transfer;transferencia_saliente_ficticia
+2026-01-05T12:00:00-0400;SRC-DEMO-0004;EXT-DEMO-0004;release;Cashback Demo;2500;0;2500;0;CLP;82500;Beneficio Demo;mercado_pago;account_money;cashback_ficticio
+2026-01-05T12:30:00-0400;SRC-DEMO-0005;EXT-DEMO-0005;release;Rendimiento Demo;900;0;900;0;CLP;83400;Rendimiento Demo;mercado_pago;account_money;rendimiento_ficticio
+2026-01-05T13:00:00-0400;SRC-DEMO-0006;EXT-DEMO-0006;release;Comision Demo;0;1200;0;1200;CLP;82200;Comision Mercado Pago Demo;mercado_pago;fee;comision_ficticia
+2026-01-05T14:00:00-0400;SRC-DEMO-0007;EXT-DEMO-0007;release;Comercio Demo Dos;0;32000;32000;0;CLP;50200;Compra Demo Dos;mercado_pago;credit_card;compra_ficticia
+2026-01-05T15:00:00-0400;SRC-DEMO-0008;EXT-DEMO-0008;release;Transferencia Demo Entrante;45000;0;45000;0;CLP;95200;Persona Demo;mercado_pago;bank_transfer;transferencia_entrante_ficticia

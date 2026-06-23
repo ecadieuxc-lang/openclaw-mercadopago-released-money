@@ -1,0 +1,8 @@
+{
+  "error": {
+    "code": "UNAUTHORIZED",
+    "message": "Authentication is required for this endpoint.",
+    "request_id": "sample-request-001",
+    "details": []
+  }
+}

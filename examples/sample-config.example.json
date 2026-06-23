@@ -1,0 +1,57 @@
+{
+  "app": {
+    "name": "openclaw-mercadopago-released-money",
+    "locale": "es-CL"
+  },
+  "provider": {
+    "name": "mercado_pago",
+    "report": "released_money",
+    "country": "CL",
+    "currency": "CLP"
+  },
+  "timezone": "America/Santiago",
+  "daily_import": {
+    "enabled": true,
+    "hour": "03:00",
+    "retry_count": 3,
+    "retry_delay_minutes": 20
+  },
+  "salary_detection": {
+    "mode": "rules",
+    "expected_day": 19,
+    "business_day_policy": "previous_business_day",
+    "confidence_required": "high",
+    "rules": [
+      {
+        "description_contains": "sample_salary_marker",
+        "sale_detail_contains": "sample_salary_marker",
+        "payment_method_type": "bank_transfer",
+        "direction": "inflow",
+        "min_amount": 100000
+      }
+    ]
+  },
+  "periods": {
+    "label_policy": "salary_anchor_month",
+    "close_on_new_salary": true,
+    "retain_previous_period_days": 7
+  },
+  "reports": {
+    "daily_columns_profile": "released_money_daily_core",
+    "manual_csv_import_enabled": true,
+    "audit_profile_enabled": true,
+    "include_payout_bank_account_number": false
+  },
+  "api": {
+    "host": "127.0.0.1",
+    "port": 3766,
+    "cors_enabled": false,
+    "auth_required": true,
+    "public_raw_exports_enabled": false
+  },
+  "logging": {
+    "level": "info",
+    "redact_secrets": true,
+    "redact_financial_sensitive_fields": true
+  }
+}

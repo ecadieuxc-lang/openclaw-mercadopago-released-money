@@ -1,0 +1,46 @@
+{
+  "app_scope": "Mercado Pago Released Money",
+  "items": [
+    {
+      "id": "mov_sample_income_001",
+      "occurred_at": "2026-06-19T12:00:00Z",
+      "amount_signed": 1250000,
+      "currency": "CLP",
+      "display_title": "Ingreso de sueldo sintético",
+      "display_subtitle": "Released Money sample",
+      "display_status": "Confirmado",
+      "movement_class": "salary",
+      "income_kind": "salary",
+      "needs_clarification": false
+    },
+    {
+      "id": "mov_sample_expense_001",
+      "occurred_at": "2026-06-20T14:00:00Z",
+      "amount_signed": -12000,
+      "currency": "CLP",
+      "display_title": "Transferencia por aclarar",
+      "display_subtitle": "Destinatario no inferido",
+      "display_status": "Requiere aclaración",
+      "movement_class": "outgoing_transfer_unknown_recipient",
+      "expense_category": "transfers",
+      "needs_clarification": true
+    },
+    {
+      "id": "mov_sample_expense_002",
+      "occurred_at": "2026-06-21T10:00:00Z",
+      "amount_signed": -2500,
+      "currency": "CLP",
+      "display_title": "Comisión sintética",
+      "display_subtitle": "Cargo Mercado Pago de ejemplo",
+      "display_status": "Confirmado",
+      "movement_class": "fees",
+      "expense_category": "fees",
+      "needs_clarification": false
+    }
+  ],
+  "page": {
+    "limit": 50,
+    "next_cursor": null,
+    "has_more": false
+  }
+}

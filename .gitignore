@@ -1,0 +1,38 @@
+# Local environment and secrets
+.env
+*.env
+.env.*
+!.env.example
+
+# Real financial or operational data
+data/
+reports/
+raw/
+exports/
+archive/
+quarantine/
+logs/
+secrets/
+backups/
+
+# Local databases
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+
+# Sensitive material and logs
+*.log
+*.pem
+*.key
+*credentials*
+*secrets*
+*sessions*
+*tokens*
+
+# Build and dependency outputs
+node_modules/
+dist/
+build/
+coverage/

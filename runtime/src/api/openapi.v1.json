@@ -1,0 +1,1040 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "openclaw-mercadopago-released-money API",
+    "version": "1.0.0",
+    "description": "Local API contract for Mercado Pago Released Money clean processed data."
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:3766",
+      "description": "Default local-only API server"
+    }
+  ],
+  "security": [
+    {
+      "financeBearerAuth": []
+    }
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Public healthcheck for the future local process",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/v1/system/doctor": {
+      "get": {
+        "summary": "Safe diagnostic status",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DoctorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/system/config/public": {
+      "get": {
+        "summary": "Public redacted configuration",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DoctorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/system/schema-version": {
+      "get": {
+        "summary": "Schema version",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SchemaVersionResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/imports/status": {
+      "get": {
+        "summary": "Import status",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImportsStatusResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/finance/home": {
+      "get": {
+        "summary": "Finance home summary",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FinanceHomeResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/finance/movements": {
+      "get": {
+        "summary": "Paginated visible movements",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MovementListResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 50,
+              "maximum": 200
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/v1/finance/periods/current": {
+      "get": {
+        "summary": "Current salary-anchored period",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PeriodSummaryResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/finance/periods/{period_id}/summary": {
+      "get": {
+        "summary": "Period summary",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PeriodSummaryResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "period_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "2026-06"
+          }
+        ]
+      }
+    },
+    "/v1/finance/history": {
+      "get": {
+        "summary": "Period history",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PeriodSummaryResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/finance/clarifications": {
+      "get": {
+        "summary": "Pending clarifications",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Clarification"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/finance/clarifications/{id}/answer": {
+      "post": {
+        "summary": "Answer clarification",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Clarification"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "clar_sample_001"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "answer"
+                ],
+                "properties": {
+                  "answer": {
+                    "type": "string",
+                    "example": "Transferencia personal confirmada por operador sintético."
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/finance/coach/current": {
+      "get": {
+        "summary": "Current coach report",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PeriodSummaryResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/finance/coach/{period_id}": {
+      "get": {
+        "summary": "Period coach report",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PeriodSummaryResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "period_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "2026-06"
+          }
+        ]
+      }
+    },
+    "/v1/assistant/context": {
+      "get": {
+        "summary": "Safe assistant context",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssistantContextResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/assistant/spending-summary": {
+      "get": {
+        "summary": "Assistant spending summary",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PeriodSummaryResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/assistant/period/{period_id}": {
+      "get": {
+        "summary": "Assistant period context",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssistantContextResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "period_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "2026-06"
+          }
+        ]
+      }
+    },
+    "/v1/exports/current-period.csv": {
+      "get": {
+        "summary": "Clean current-period CSV export",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/csv": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/exports/periods/{period_id}.csv": {
+      "get": {
+        "summary": "Clean period CSV export",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/csv": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "period_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "2026-06"
+          }
+        ]
+      }
+    },
+    "/v1/exports/periods/{period_id}/summary.json": {
+      "get": {
+        "summary": "Clean period summary JSON export",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PeriodSummaryResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "period_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "2026-06"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "financeBearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "opaque local token",
+        "description": "Local bearer token from FINANCE_API_TOKEN. Token values are never returned."
+      }
+    },
+    "schemas": {
+      "HealthResponse": {
+        "type": "object",
+        "required": [
+          "status",
+          "service"
+        ],
+        "properties": {
+          "status": {
+            "type": "string",
+            "example": "ok"
+          },
+          "service": {
+            "type": "string",
+            "example": "Mercado Pago Released Money"
+          },
+          "version": {
+            "type": "string",
+            "example": "v1"
+          }
+        }
+      },
+      "DoctorResponse": {
+        "type": "object",
+        "required": [
+          "status",
+          "checks"
+        ],
+        "properties": {
+          "status": {
+            "type": "string",
+            "example": "ok"
+          },
+          "checks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "SchemaVersionResponse": {
+        "type": "object",
+        "required": [
+          "schema_version",
+          "migration"
+        ],
+        "properties": {
+          "schema_version": {
+            "type": "integer",
+            "example": 1
+          },
+          "migration": {
+            "type": "string",
+            "example": "0001_initial_schema"
+          },
+          "app_scope": {
+            "type": "string",
+            "example": "Mercado Pago Released Money"
+          }
+        }
+      },
+      "ImportsStatusResponse": {
+        "type": "object",
+        "required": [
+          "app_scope",
+          "last_import_status",
+          "source"
+        ],
+        "properties": {
+          "app_scope": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string",
+            "example": "mercado_pago_released_money"
+          },
+          "last_import_status": {
+            "type": "string",
+            "example": "ok"
+          },
+          "imported_reports": {
+            "type": "integer"
+          },
+          "visible_movements": {
+            "type": "integer"
+          },
+          "pending_clarifications": {
+            "type": "integer"
+          }
+        }
+      },
+      "FinanceHomeResponse": {
+        "type": "object",
+        "required": [
+          "app_scope",
+          "current_period",
+          "totals"
+        ],
+        "properties": {
+          "app_scope": {
+            "type": "string"
+          },
+          "current_period": {
+            "$ref": "#/components/schemas/PeriodSummaryResponse"
+          },
+          "totals": {
+            "type": "object",
+            "properties": {
+              "income_total": {
+                "type": "integer"
+              },
+              "expense_total": {
+                "type": "integer"
+              },
+              "net_total": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      },
+      "Movement": {
+        "type": "object",
+        "required": [
+          "id",
+          "occurred_at",
+          "amount_signed",
+          "currency",
+          "display_title",
+          "movement_class"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "occurred_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "amount_signed": {
+            "type": "integer"
+          },
+          "currency": {
+            "type": "string",
+            "example": "CLP"
+          },
+          "display_title": {
+            "type": "string"
+          },
+          "display_subtitle": {
+            "type": "string"
+          },
+          "display_status": {
+            "type": "string"
+          },
+          "movement_class": {
+            "type": "string"
+          },
+          "income_kind": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Only for income movements."
+          },
+          "expense_category": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Only for expense movements."
+          },
+          "needs_clarification": {
+            "type": "boolean"
+          }
+        }
+      },
+      "MovementListResponse": {
+        "type": "object",
+        "required": [
+          "app_scope",
+          "items",
+          "page"
+        ],
+        "properties": {
+          "app_scope": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Movement"
+            }
+          },
+          "page": {
+            "type": "object",
+            "required": [
+              "limit",
+              "has_more"
+            ],
+            "properties": {
+              "limit": {
+                "type": "integer"
+              },
+              "next_cursor": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "has_more": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      },
+      "PeriodSummaryResponse": {
+        "type": "object",
+        "required": [
+          "period_id",
+          "period_label",
+          "income_total",
+          "expense_total",
+          "net_total"
+        ],
+        "properties": {
+          "period_id": {
+            "type": "string",
+            "example": "2026-06"
+          },
+          "period_label": {
+            "type": "string",
+            "example": "Junio 2026"
+          },
+          "status": {
+            "type": "string"
+          },
+          "income_total": {
+            "type": "integer"
+          },
+          "expense_total": {
+            "type": "integer"
+          },
+          "net_total": {
+            "type": "integer"
+          },
+          "expense_by_category": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer"
+            }
+          },
+          "income_by_kind": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer"
+            }
+          },
+          "pending_clarification_count": {
+            "type": "integer"
+          }
+        }
+      },
+      "Clarification": {
+        "type": "object",
+        "required": [
+          "id",
+          "question",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "movement_id": {
+            "type": "string"
+          },
+          "question": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "example": "pending"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      },
+      "AssistantContextResponse": {
+        "type": "object",
+        "required": [
+          "app_scope",
+          "summary",
+          "safe_for_assistant"
+        ],
+        "properties": {
+          "app_scope": {
+            "type": "string"
+          },
+          "safe_for_assistant": {
+            "type": "boolean"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "current_period": {
+            "$ref": "#/components/schemas/PeriodSummaryResponse"
+          },
+          "clarifications": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Clarification"
+            }
+          }
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "required": [
+          "error"
+        ],
+        "properties": {
+          "error": {
+            "type": "object",
+            "required": [
+              "code",
+              "message"
+            ],
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              },
+              "request_id": {
+                "type": "string"
+              },
+              "details": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

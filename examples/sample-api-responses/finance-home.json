@@ -1,0 +1,24 @@
+{
+  "app_scope": "Mercado Pago Released Money",
+  "current_period": {
+    "period_id": "2026-06",
+    "period_label": "Junio 2026",
+    "status": "open",
+    "income_total": 1250000,
+    "expense_total": 14500,
+    "net_total": 1235500,
+    "expense_by_category": {
+      "transfers": 12000,
+      "fees": 2500
+    },
+    "income_by_kind": {
+      "salary": 1250000
+    },
+    "pending_clarification_count": 1
+  },
+  "totals": {
+    "income_total": 1250000,
+    "expense_total": 14500,
+    "net_total": 1235500
+  }
+}

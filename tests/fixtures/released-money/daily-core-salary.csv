@@ -1,0 +1,7 @@
+DATE;SOURCE_ID;EXTERNAL_REFERENCE;RECORD_TYPE;DESCRIPTION;NET_CREDIT_AMOUNT;NET_DEBIT_AMOUNT;GROSS_AMOUNT;MP_FEE_AMOUNT;CURRENCY;BALANCE_AMOUNT;SALE_DETAIL;BUSINESS_UNIT;PAYMENT_METHOD_TYPE;SEGMENT_DETAIL
+2026-06-19T09:00:00-0400;SRC-DEMO-S001;EXT-DEMO-S001;release;Pago Nomina Demo;500000;0;500000;0;CLP;500000;Pago Nomina Demo;mercado_pago;bank_transfer;sueldo_ficticio
+2026-06-19T09:30:00-0400;SRC-DEMO-S002;EXT-DEMO-S002;release;Bono Demo;60000;0;60000;0;CLP;560000;Bono Demo;mercado_pago;bank_transfer;bono_ficticio
+2026-06-19T12:00:00-0400;SRC-DEMO-S003;EXT-DEMO-S003;release;Comercio Demo Almuerzo;0;9000;9000;0;CLP;551000;Gasto Despues Sueldo Demo;mercado_pago;debit_card;gasto_post_sueldo_ficticio
+2026-06-20T08:00:00-0400;SRC-DEMO-S004;EXT-DEMO-S004;release;Transferencia Demo Por Revisar;0;80000;80000;0;CLP;471000;Transferencia Revision Demo;mercado_pago;bank_transfer;transferencia_por_revisar_ficticia
+2026-06-20T15:00:00-0400;SRC-DEMO-S005;EXT-DEMO-S005;release;Comercio Demo Compra;0;35000;35000;0;CLP;436000;Compra Comercio Demo;mercado_pago;credit_card;compra_comercio_ficticia
+2026-06-21T10:00:00-0400;SRC-DEMO-S006;EXT-DEMO-S006;release;Ingreso Extra Demo;45000;0;45000;0;CLP;481000;Ingreso Extra Demo;mercado_pago;account_money;ingreso_extra_no_sueldo_ficticio

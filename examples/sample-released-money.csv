@@ -1,0 +1,4 @@
+DATE;SOURCE_ID;EXTERNAL_REFERENCE;RECORD_TYPE;DESCRIPTION;NET_CREDIT_AMOUNT;NET_DEBIT_AMOUNT;GROSS_AMOUNT;MP_FEE_AMOUNT;CURRENCY;BALANCE_AMOUNT;SALE_DETAIL;BUSINESS_UNIT;PAYMENT_METHOD_TYPE;SEGMENT_DETAIL
+2026-07-01T09:00:00-0400;SRC-DEMO-P001;EXT-DEMO-P001;release;Ingreso Demo Publico;30000;0;30000;0;CLP;30000;Venta Publica Demo;mercado_pago;account_money;sample_ingreso_ficticio
+2026-07-01T10:00:00-0400;SRC-DEMO-P002;EXT-DEMO-P002;release;Comercio Demo Publico;0;8000;8000;0;CLP;22000;Compra Publica Demo;mercado_pago;debit_card;sample_egreso_ficticio
+2026-07-01T11:00:00-0400;SRC-DEMO-P003;EXT-DEMO-P003;release;Cashback Demo Publico;500;0;500;0;CLP;22500;Cashback Publico Demo;mercado_pago;account_money;sample_cashback_ficticio

@@ -1,0 +1,5 @@
+DATE,SOURCE_ID,EXTERNAL_REFERENCE,RECORD_TYPE,DESCRIPTION,NET_CREDIT_AMOUNT,NET_DEBIT_AMOUNT,GROSS_AMOUNT,MP_FEE_AMOUNT,CURRENCY,BALANCE_AMOUNT,SALE_DETAIL,BUSINESS_UNIT,PAYMENT_METHOD_TYPE,SEGMENT_DETAIL
+2026-02-03T09:00:00-0400,SRC-DEMO-C001,EXT-DEMO-C001,release,Ingreso Demo Coma,70000,0,70000,0,CLP,70000,Venta Demo Coma,mercado_pago,account_money,ingreso_ficticio
+2026-02-03T10:00:00-0400,SRC-DEMO-C002,EXT-DEMO-C002,release,Comercio Demo Coma,0,12000,12000,0,CLP,58000,Compra Demo Coma,mercado_pago,debit_card,gasto_ficticio
+2026-02-03T11:00:00-0400,SRC-DEMO-C003,EXT-DEMO-C003,release,Cashback Demo Coma,800,0,800,0,CLP,58800,Beneficio Demo Coma,mercado_pago,account_money,cashback_ficticio
+2026-02-03T12:00:00-0400,SRC-DEMO-C004,EXT-DEMO-C004,release,Transferencia Demo Coma,0,20000,20000,0,CLP,38800,Transferencia Demo Coma,mercado_pago,bank_transfer,egreso_ficticio

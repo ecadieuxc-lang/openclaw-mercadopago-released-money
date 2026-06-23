@@ -1,0 +1,9 @@
+DATE;SOURCE_ID;EXTERNAL_REFERENCE;RECORD_TYPE;DESCRIPTION;NET_CREDIT_AMOUNT;NET_DEBIT_AMOUNT;GROSS_AMOUNT;MP_FEE_AMOUNT;CURRENCY;BALANCE_AMOUNT;SALE_DETAIL;BUSINESS_UNIT;PAYMENT_METHOD_TYPE;SEGMENT_DETAIL
+2026-05-01T00:00:00-0400;SRC-DEMO-T001;EXT-DEMO-T001;initial_available_balance;Saldo Inicial Disponible Demo;60000;0;0;0;CLP;60000;Saldo Inicial Demo;mercado_pago;technical;initial_available_balance
+2026-05-01T08:00:00-0400;SRC-DEMO-T002;EXT-DEMO-T002;available_balance;Saldo Disponible Demo;0;0;0;0;CLP;60000;Saldo Disponible Demo;mercado_pago;technical;available_balance
+2026-05-01T09:00:00-0400;SRC-DEMO-T003;EXT-DEMO-T003;total;Total Demo;0;0;0;0;CLP;60000;Total Demo;mercado_pago;technical;total
+2026-05-01T10:00:00-0400;SRC-DEMO-T004;EXT-DEMO-T004;pre_payout_demo;Pre Retiro Demo;0;0;0;0;CLP;60000;Pre Payout Demo;mercado_pago;technical;pre_payout_demo
+2026-05-01T11:00:00-0400;SRC-DEMO-T005;EXT-DEMO-T005;post_payout_demo;Post Retiro Demo;0;0;0;0;CLP;45000;Post Payout Demo;mercado_pago;technical;post_payout_demo
+2026-05-01T12:00:00-0400;SRC-DEMO-T006;EXT-DEMO-T006;reserve_for_payout;Reserva Para Retiro Demo;0;15000;0;0;CLP;45000;Reserva Demo;mercado_pago;technical;reserve_for_payout
+2026-05-01T13:00:00-0400;SRC-DEMO-T007;EXT-DEMO-T007;reserve_for_payment;Reserva Para Pago Demo;0;7000;0;0;CLP;38000;Reserva Pago Demo;mercado_pago;technical;reserve_for_payment
+2026-05-01T14:00:00-0400;SRC-DEMO-T008;EXT-DEMO-T008;release;Liberacion Demo Tecnica;22000;0;22000;0;CLP;60000;Release Demo;mercado_pago;account_money;release

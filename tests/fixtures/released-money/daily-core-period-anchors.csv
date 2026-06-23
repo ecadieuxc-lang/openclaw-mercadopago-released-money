@@ -1,0 +1,7 @@
+DATE;SOURCE_ID;EXTERNAL_REFERENCE;RECORD_TYPE;DESCRIPTION;NET_CREDIT_AMOUNT;NET_DEBIT_AMOUNT;GROSS_AMOUNT;MP_FEE_AMOUNT;CURRENCY;BALANCE_AMOUNT;SALE_DETAIL;BUSINESS_UNIT;PAYMENT_METHOD_TYPE;SEGMENT_DETAIL
+2026-06-18T08:00:00-0400;SRC-DEMO-P001;EXT-DEMO-P001;release;Comercio Demo Antes;0;12000;12000;0;CLP;88000;Compra Antes Ancla Demo;mercado_pago;debit_card;gasto_pre_sueldo_ficticio
+2026-06-19T09:00:00-0400;SRC-DEMO-P002;EXT-DEMO-P002;release;Pago Nomina Demo Junio;500000;0;500000;0;CLP;588000;Pago Nomina Demo Junio;mercado_pago;bank_transfer;sueldo_ficticio
+2026-06-19T10:00:00-0400;SRC-DEMO-P003;EXT-DEMO-P003;release;Bono Demo Junio;60000;0;60000;0;CLP;648000;Bono Demo Junio;mercado_pago;bank_transfer;bono_ficticio
+2026-06-28T12:00:00-0400;SRC-DEMO-P004;EXT-DEMO-P004;release;Comercio Demo Cierre Junio;0;28000;28000;0;CLP;620000;Compra Demo Periodo Junio;mercado_pago;credit_card;gasto_ficticio
+2026-07-20T09:00:00-0400;SRC-DEMO-P005;EXT-DEMO-P005;release;Pago Nomina Demo Julio;510000;0;510000;0;CLP;1130000;Pago Nomina Demo Julio;mercado_pago;bank_transfer;sueldo_ficticio
+2026-07-20T12:00:00-0400;SRC-DEMO-P006;EXT-DEMO-P006;release;Comercio Demo Julio;0;45000;45000;0;CLP;1085000;Compra Demo Periodo Julio;mercado_pago;debit_card;gasto_ficticio

@@ -1,0 +1,18 @@
+# Documentation template only. Do not install from this repository task.
+# Future location, if explicitly installed by an operator: systemd --user unit.
+
+[Unit]
+Description=OpenClaw Mercado Pago Released Money daily import
+Documentation=docs/installation.md docs/installer.md docs/doctor.md
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/.local/share/openclaw-mercadopago-released-money/app/runtime
+EnvironmentFile=%h/.config/openclaw-mercadopago-released-money/secrets/.env
+ExecStart=/usr/bin/env node src/cli/index.mjs import --source-api --config %h/.config/openclaw-mercadopago-released-money/config.json
+
+# Safety expectations for future real install:
+# - secrets stay in the EnvironmentFile and are never printed;
+# - API defaults to 127.0.0.1;
+# - data, config, secrets, and state remain separated;
+# - No bancos / No Open Banking / No scraping.
